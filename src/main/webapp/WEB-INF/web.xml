@@ -5,6 +5,7 @@
 	version="3.1">
 	<display-name>Desafio</display-name>
 	<welcome-file-list>
-		<welcome-file></welcome-file>
+		<welcome-file>pages/pessoa/pesquisarPessoa.jsp</welcome-file>
+	
 	</welcome-file-list>
 </web-app>
