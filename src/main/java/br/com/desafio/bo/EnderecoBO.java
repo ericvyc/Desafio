@@ -6,54 +6,87 @@ public class EnderecoBO implements Serializable {
 
 	private static final long serialVersionUID = 7341480610948280153L;
 
-	private String nome;
+	private String endereco;
 
-	private String dataNascimento;
+	private Integer numero;
 
-	private char sexo;
+	private String complemento;
 
-	private String cpf;
+	private String bairro;
 
-	public String getNome() {
-		return nome;
+	private String cidade;
+
+	private String estado;
+
+	private String cep;
+
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
-	public String getDataNascimento() {
-		return dataNascimento;
+	public Integer getNumero() {
+		return numero;
 	}
 
-	public void setDataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public void setNumero(Integer numero) {
+		this.numero = numero;
 	}
 
-	public char getSexo() {
-		return sexo;
+	public String getComplemento() {
+		return complemento;
 	}
 
-	public void setSexo(char sexo) {
-		this.sexo = sexo;
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public String getBairro() {
+		return bairro;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
-		result = prime * result + ((dataNascimento == null) ? 0 : dataNascimento.hashCode());
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + sexo;
+		result = prime * result + ((bairro == null) ? 0 : bairro.hashCode());
+		result = prime * result + ((cep == null) ? 0 : cep.hashCode());
+		result = prime * result + ((cidade == null) ? 0 : cidade.hashCode());
+		result = prime * result + ((complemento == null) ? 0 : complemento.hashCode());
+		result = prime * result + ((endereco == null) ? 0 : endereco.hashCode());
+		result = prime * result + ((estado == null) ? 0 : estado.hashCode());
+		result = prime * result + ((numero == null) ? 0 : numero.hashCode());
 		return result;
 	}
 
@@ -69,28 +102,53 @@ public class EnderecoBO implements Serializable {
 			return false;
 		}
 		EnderecoBO other = (EnderecoBO) obj;
-		if (cpf == null) {
-			if (other.cpf != null) {
+		if (bairro == null) {
+			if (other.bairro != null) {
 				return false;
 			}
-		} else if (!cpf.equals(other.cpf)) {
+		} else if (!bairro.equals(other.bairro)) {
 			return false;
 		}
-		if (dataNascimento == null) {
-			if (other.dataNascimento != null) {
+		if (cep == null) {
+			if (other.cep != null) {
 				return false;
 			}
-		} else if (!dataNascimento.equals(other.dataNascimento)) {
+		} else if (!cep.equals(other.cep)) {
 			return false;
 		}
-		if (nome == null) {
-			if (other.nome != null) {
+		if (cidade == null) {
+			if (other.cidade != null) {
 				return false;
 			}
-		} else if (!nome.equals(other.nome)) {
+		} else if (!cidade.equals(other.cidade)) {
 			return false;
 		}
-		if (sexo != other.sexo) {
+		if (complemento == null) {
+			if (other.complemento != null) {
+				return false;
+			}
+		} else if (!complemento.equals(other.complemento)) {
+			return false;
+		}
+		if (endereco == null) {
+			if (other.endereco != null) {
+				return false;
+			}
+		} else if (!endereco.equals(other.endereco)) {
+			return false;
+		}
+		if (estado == null) {
+			if (other.estado != null) {
+				return false;
+			}
+		} else if (!estado.equals(other.estado)) {
+			return false;
+		}
+		if (numero == null) {
+			if (other.numero != null) {
+				return false;
+			}
+		} else if (!numero.equals(other.numero)) {
 			return false;
 		}
 		return true;
@@ -98,7 +156,8 @@ public class EnderecoBO implements Serializable {
 
 	@Override
 	public String toString() {
-		return "EnderecoBO [nome=" + nome + ", dataNascimento=" + dataNascimento + ", sexo=" + sexo + ", cpf=" + cpf + "]";
+		return "EnderecoBO [endereco=" + endereco + ", numero=" + numero + ", complemento=" + complemento + ", bairro=" + bairro + ", cidade="
+				+ cidade + ", estado=" + estado + ", cep=" + cep + "]";
 	}
 
 }

@@ -6,87 +6,62 @@ public class PessoaBO implements Serializable {
 
 	private static final long serialVersionUID = 3405671676514603949L;
 
-	private String endereco;
+	private String nome;
 
-	private Integer numero;
+	private String dataNascimento;
 
-	private String complemento;
+	private char sexo;
 
-	private String bairro;
+	private String cpf;
 
-	private String cidade;
-
-	private String estado;
-
-	private String cep;
-
-	public String getEndereco() {
-		return endereco;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public Integer getNumero() {
-		return numero;
+	public String getDataNascimento() {
+		return dataNascimento;
 	}
 
-	public void setNumero(Integer numero) {
-		this.numero = numero;
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
-	public String getComplemento() {
-		return complemento;
+	public char getSexo() {
+		return sexo;
 	}
 
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
+	public void setSexo(char sexo) {
+		this.sexo = sexo;
 	}
 
-	public String getBairro() {
-		return bairro;
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
-	public String getCidade() {
-		return cidade;
-	}
-
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-
-	public String getEstado() {
-		return estado;
-	}
-
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
+	public PessoaBO(String nome, String dataNascimento, char sexo, String cpf) {
+		super();
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.sexo = sexo;
+		this.cpf = cpf;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((bairro == null) ? 0 : bairro.hashCode());
-		result = prime * result + ((cep == null) ? 0 : cep.hashCode());
-		result = prime * result + ((cidade == null) ? 0 : cidade.hashCode());
-		result = prime * result + ((complemento == null) ? 0 : complemento.hashCode());
-		result = prime * result + ((endereco == null) ? 0 : endereco.hashCode());
-		result = prime * result + ((estado == null) ? 0 : estado.hashCode());
-		result = prime * result + ((numero == null) ? 0 : numero.hashCode());
+		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
+		result = prime * result + ((dataNascimento == null) ? 0 : dataNascimento.hashCode());
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+		result = prime * result + sexo;
 		return result;
 	}
 
@@ -102,53 +77,28 @@ public class PessoaBO implements Serializable {
 			return false;
 		}
 		PessoaBO other = (PessoaBO) obj;
-		if (bairro == null) {
-			if (other.bairro != null) {
+		if (cpf == null) {
+			if (other.cpf != null) {
 				return false;
 			}
-		} else if (!bairro.equals(other.bairro)) {
+		} else if (!cpf.equals(other.cpf)) {
 			return false;
 		}
-		if (cep == null) {
-			if (other.cep != null) {
+		if (dataNascimento == null) {
+			if (other.dataNascimento != null) {
 				return false;
 			}
-		} else if (!cep.equals(other.cep)) {
+		} else if (!dataNascimento.equals(other.dataNascimento)) {
 			return false;
 		}
-		if (cidade == null) {
-			if (other.cidade != null) {
+		if (nome == null) {
+			if (other.nome != null) {
 				return false;
 			}
-		} else if (!cidade.equals(other.cidade)) {
+		} else if (!nome.equals(other.nome)) {
 			return false;
 		}
-		if (complemento == null) {
-			if (other.complemento != null) {
-				return false;
-			}
-		} else if (!complemento.equals(other.complemento)) {
-			return false;
-		}
-		if (endereco == null) {
-			if (other.endereco != null) {
-				return false;
-			}
-		} else if (!endereco.equals(other.endereco)) {
-			return false;
-		}
-		if (estado == null) {
-			if (other.estado != null) {
-				return false;
-			}
-		} else if (!estado.equals(other.estado)) {
-			return false;
-		}
-		if (numero == null) {
-			if (other.numero != null) {
-				return false;
-			}
-		} else if (!numero.equals(other.numero)) {
+		if (sexo != other.sexo) {
 			return false;
 		}
 		return true;
@@ -156,8 +106,7 @@ public class PessoaBO implements Serializable {
 
 	@Override
 	public String toString() {
-		return "PessoaBO [endereco=" + endereco + ", numero=" + numero + ", complemento=" + complemento + ", bairro=" + bairro + ", cidade=" + cidade
-				+ ", estado=" + estado + ", cep=" + cep + "]";
+		return "PessoaBO [nome=" + nome + ", dataNascimento=" + dataNascimento + ", sexo=" + sexo + ", cpf=" + cpf + "]";
 	}
 
 }
