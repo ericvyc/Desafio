@@ -14,6 +14,19 @@ App.factory('PessoaService', ['$http', '$q', function($http, $q){
                                         return $q.reject(errResponse);
                                     }
                             );
-            }
+            },
+    
+            criarPessoa: function(pessoa){
+            		return $http.post('http://localhost:8080/desafio/pessoa/', pessoa)
+                    		.then(
+                    				function(response){
+                    					return response.data;
+                    				}, 
+                    				function(errResponse){
+                    					console.error('Erro ao criar pessoa');
+                    					return $q.reject(errResponse);
+                    				}
+                    		);
+    }
     };
 }]);

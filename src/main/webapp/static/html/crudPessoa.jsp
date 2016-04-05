@@ -4,23 +4,23 @@
 	
 	<div ng-controller="PessoaController as ctrl">
 
-	<form action="#" method="post">
+	<form method="post" ng-submit="ctrl.submit()">
 		<!-- area de campos do form -->
 
 		<div class="row">
 			<div class="form-group col-md-4">
 				<label for="nomePessoa">Nome</label> 
-				<input type="text" class="form-control" id="nome" ng-model="ctrl.pessoa.nome">
+				<input type="text" class="form-control" id="nome" ng-model="ctrl.pessoa.nome" ng-required="required">
 			</div>
 
 			<div class="form-group col-md-2">
 				<label for="dataNascimento">Data Nascimento</label>
-				<input type="date" class="form-control" id="dataNascimento" ng-model="ctrl.pessoa.dataNascimento">
+				<input type="text" class="form-control" id="dataNascimento" ng-model="ctrl.pessoa.dataNascimento" ng-required="required">
 			</div>
 
 			<div class="form-group col-md-2">
 				<label for="sexo">Sexo</label>
-				<select id="sexo" class="form-control" ng-model="ctrl.pessoa.sexo">
+				<select id="sexo" class="form-control" ng-model="ctrl.pessoa.sexo" ng-required="required">
 					<option value="F">Feminino</option>
 					<option value="M">Masculino</option>
 				</select>
@@ -28,7 +28,7 @@
 			
 			<div class="form-group col-md-4">
 				<label for="cpf">CPF</label> 
-				<input type="text" class="form-control" id="cpf" ng-model="ctrl.pessoa.cpf">
+				<input type="text" class="form-control" id="cpf" ng-model="ctrl.pessoa.cpf" ng-required="required" ui-mask="999.999.999-99">
 			</div>
 			
 			

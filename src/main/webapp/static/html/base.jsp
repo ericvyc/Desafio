@@ -35,7 +35,7 @@
 	<script src="<c:url value='/static/js/app.js' />"></script>
 	<script src="<c:url value='/static/js/service/pessoa.service.js' />"></script>
 	<script src="<c:url value='/static/js/controller/pessoa.controller.js' />"></script>
-		<script src="<c:url value='/static/js/service/endereco.service.js' />"></script>
+	<script src="<c:url value='/static/js/service/endereco.service.js' />"></script>
 	<script src="<c:url value='/static/js/controller/endereco.controller.js' />"></script>
 </head>
 <body ng-app="meuApp" class="ng-cloak">

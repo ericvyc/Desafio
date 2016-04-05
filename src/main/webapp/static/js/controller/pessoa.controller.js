@@ -16,6 +16,24 @@ App.controller('PessoaController', ['$scope', 'PessoaService', function($scope, 
                                 }
                        );
           };
+          
+          self.criarPessoa = function(pessoa){
+              PessoaService.criarPessoa(pessoa)
+                      .then(
+                      self.fetchAllUsers, 
+                              function(errResponse){
+                                   console.error('Erro ao criar pessoa.');
+                              } 
+                  );
+          };
+          
+          self.submit = function() {
+              if(self.pessoa.id === null  || self.pessoa.id === undefined || self.pessoa.id === ''){
+                  console.log('Salvando novo usuário', self.pessoa);    
+                  self.criarPessoa(self.pessoa);
+              }
+
+          };
             
           self.fetchAllUsers();
  

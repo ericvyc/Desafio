@@ -6,7 +6,7 @@ public class PessoaBO implements Serializable {
 
 	private static final long serialVersionUID = 3405671676514603949L;
 
-	private Integer id;
+	private long id;
 
 	private String nome;
 
@@ -16,9 +16,21 @@ public class PessoaBO implements Serializable {
 
 	private String cpf;
 
-	public PessoaBO(Integer id, String nome, String dataNascimento, char sexo, String cpf) {
+	public PessoaBO() {
+		id = 0;
+	}
+
+	public PessoaBO(long id, String nome, String dataNascimento, char sexo, String cpf) {
 		super();
 		this.id = id;
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.sexo = sexo;
+		this.cpf = cpf;
+	}
+
+	public PessoaBO(String cpf, String dataNascimento, String nome, char sexo) {
+		super();
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.sexo = sexo;
@@ -36,7 +48,7 @@ public class PessoaBO implements Serializable {
 		int result = 1;
 		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
 		result = prime * result + ((dataNascimento == null) ? 0 : dataNascimento.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + (int) (id ^ (id >>> 32));
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + sexo;
 		return result;
@@ -68,11 +80,7 @@ public class PessoaBO implements Serializable {
 		} else if (!dataNascimento.equals(other.dataNascimento)) {
 			return false;
 		}
-		if (id == null) {
-			if (other.id != null) {
-				return false;
-			}
-		} else if (!id.equals(other.id)) {
+		if (id != other.id) {
 			return false;
 		}
 		if (nome == null) {
@@ -88,11 +96,11 @@ public class PessoaBO implements Serializable {
 		return true;
 	}
 
-	public Integer getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
