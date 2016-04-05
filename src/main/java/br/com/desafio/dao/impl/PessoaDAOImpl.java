@@ -63,9 +63,9 @@ public class PessoaDAOImpl implements PessoaDAO, Serializable {
 	}
 
 	private static List<PessoaBO> popular() {
-		pessoas.add(new PessoaBO("Eric", "12-08-1995", 'M', "01816298603"));
-		pessoas.add(new PessoaBO("Vilar", "11-09-1995", 'M', "01816298603"));
-		pessoas.add(new PessoaBO("Yankous", "10-10-1995", 'M', "01816298603"));
+		pessoas.add(new PessoaBO(1, "Eric", "12-08-1995", 'M', "01816298603"));
+		pessoas.add(new PessoaBO(2, "Vilar", "11-09-1995", 'M', "01816298603"));
+		pessoas.add(new PessoaBO(3, "Yankous", "10-10-1995", 'M', "01816298603"));
 		return pessoas;
 	}
 

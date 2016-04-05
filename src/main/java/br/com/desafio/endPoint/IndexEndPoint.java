@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/")
 public class IndexEndPoint {
 
+	private static final String BASE = "base";
+
 	@RequestMapping(method = RequestMethod.GET)
 	public String getIndex() {
-		return "crudPessoa";
+		return BASE;
 	}
 
 }

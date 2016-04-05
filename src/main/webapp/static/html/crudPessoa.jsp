@@ -1,49 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Incluir Pessoa</title>
-<style>
-.nome.ng-valid {
-	background-color: lightgreen;
-}
-
-.nome.ng-dirty.ng-invalid-required {
-	background-color: red;
-}
-
-.nome.ng-dirty.ng-invalid-minlength {
-	background-color: yellow;
-}
-
-.email.ng-valid {
-	background-color: lightgreen;
-}
-
-.email.ng-dirty.ng-invalid-required {
-	background-color: red;
-}
-
-.email.ng-dirty.ng-invalid-email {
-	background-color: yellow;
-}
-</style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
-	<script src="<c:url value='/static/js/app.js' />"></script>
-	<script src="<c:url value='/static/js/service/pessoa.service.js' />"></script>
-	<script src="<c:url value='/static/js/controller/pessoa.controller.js' />"></script>
-</head>
-<body ng-app="meuApp" class="ng-cloak">
-
 	<div id="main" class="container-fluid">
 		<h3 class="page-header">Crud Pessoa</h3>
 	</div>
 	
 	<div ng-controller="PessoaController as ctrl">
 
-	<form action="adicionarPessoa" method="post">
+	<form action="#" method="post">
 		<!-- area de campos do form -->
 
 		<div class="row">
@@ -71,7 +32,7 @@
 		<div id="actions" class="row">
 			<div class="col-md-12">
 				<button type="submit" class="btn btn-primary">Salvar</button>
-				<a href="index.html" class="btn btn-default">Cancelar</a>
+				<button type="reset" class="btn btn-default">Cancelar</button>
 			</div>
 		</div>
 	</form>
@@ -80,6 +41,7 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
+					<th>Id</th>
 					<th>Nome</th>
 					<th>Data de Nascimento</th>
 					<th>Sexo</th>
@@ -88,6 +50,7 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="p in ctrl.pessoas">
+					<td><span ng-bind="p.id"></span></td>
 					<td><span ng-bind="p.nome"></span></td>
                     <td><span ng-bind="p.dataNascimento"></span></td>
                     <td><span ng-bind="p.sexo"></span></td>
@@ -98,6 +61,3 @@
 	</div>
 	
 	</div>
-	
-</body>
-</html>

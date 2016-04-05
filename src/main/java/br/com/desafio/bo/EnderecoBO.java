@@ -6,7 +6,7 @@ public class EnderecoBO implements Serializable {
 
 	private static final long serialVersionUID = 7341480610948280153L;
 
-	private String endereco;
+	private String logradouro;
 
 	private Integer numero;
 
@@ -14,66 +14,16 @@ public class EnderecoBO implements Serializable {
 
 	private String bairro;
 
-	private String cidade;
+	private String localidade;
 
-	private String estado;
+	private String uf;
 
 	private String cep;
 
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-
-	public Integer getNumero() {
-		return numero;
-	}
-
-	public void setNumero(Integer numero) {
-		this.numero = numero;
-	}
-
-	public String getComplemento() {
-		return complemento;
-	}
-
-	public void setComplemento(String complemento) {
-		this.complemento = complemento;
-	}
-
-	public String getBairro() {
-		return bairro;
-	}
-
-	public void setBairro(String bairro) {
-		this.bairro = bairro;
-	}
-
-	public String getCidade() {
-		return cidade;
-	}
-
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-
-	public String getEstado() {
-		return estado;
-	}
-
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
+	@Override
+	public String toString() {
+		return "EnderecoBO [logradouro=" + logradouro + ", numero=" + numero + ", complemento=" + complemento + ", bairro=" + bairro + ", localidade="
+				+ localidade + ", uf=" + uf + ", cep=" + cep + "]";
 	}
 
 	@Override
@@ -82,11 +32,11 @@ public class EnderecoBO implements Serializable {
 		int result = 1;
 		result = prime * result + ((bairro == null) ? 0 : bairro.hashCode());
 		result = prime * result + ((cep == null) ? 0 : cep.hashCode());
-		result = prime * result + ((cidade == null) ? 0 : cidade.hashCode());
 		result = prime * result + ((complemento == null) ? 0 : complemento.hashCode());
-		result = prime * result + ((endereco == null) ? 0 : endereco.hashCode());
-		result = prime * result + ((estado == null) ? 0 : estado.hashCode());
+		result = prime * result + ((localidade == null) ? 0 : localidade.hashCode());
+		result = prime * result + ((logradouro == null) ? 0 : logradouro.hashCode());
 		result = prime * result + ((numero == null) ? 0 : numero.hashCode());
+		result = prime * result + ((uf == null) ? 0 : uf.hashCode());
 		return result;
 	}
 
@@ -116,13 +66,6 @@ public class EnderecoBO implements Serializable {
 		} else if (!cep.equals(other.cep)) {
 			return false;
 		}
-		if (cidade == null) {
-			if (other.cidade != null) {
-				return false;
-			}
-		} else if (!cidade.equals(other.cidade)) {
-			return false;
-		}
 		if (complemento == null) {
 			if (other.complemento != null) {
 				return false;
@@ -130,18 +73,18 @@ public class EnderecoBO implements Serializable {
 		} else if (!complemento.equals(other.complemento)) {
 			return false;
 		}
-		if (endereco == null) {
-			if (other.endereco != null) {
+		if (localidade == null) {
+			if (other.localidade != null) {
 				return false;
 			}
-		} else if (!endereco.equals(other.endereco)) {
+		} else if (!localidade.equals(other.localidade)) {
 			return false;
 		}
-		if (estado == null) {
-			if (other.estado != null) {
+		if (logradouro == null) {
+			if (other.logradouro != null) {
 				return false;
 			}
-		} else if (!estado.equals(other.estado)) {
+		} else if (!logradouro.equals(other.logradouro)) {
 			return false;
 		}
 		if (numero == null) {
@@ -151,13 +94,70 @@ public class EnderecoBO implements Serializable {
 		} else if (!numero.equals(other.numero)) {
 			return false;
 		}
+		if (uf == null) {
+			if (other.uf != null) {
+				return false;
+			}
+		} else if (!uf.equals(other.uf)) {
+			return false;
+		}
 		return true;
 	}
 
-	@Override
-	public String toString() {
-		return "EnderecoBO [endereco=" + endereco + ", numero=" + numero + ", complemento=" + complemento + ", bairro=" + bairro + ", cidade="
-				+ cidade + ", estado=" + estado + ", cep=" + cep + "]";
+	public String getLogradouro() {
+		return logradouro;
+	}
+
+	public void setLogradouro(String logradouro) {
+		this.logradouro = logradouro;
+	}
+
+	public Integer getNumero() {
+		return numero;
+	}
+
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+
+	public String getComplemento() {
+		return complemento;
+	}
+
+	public void setComplemento(String complemento) {
+		this.complemento = complemento;
+	}
+
+	public String getBairro() {
+		return bairro;
+	}
+
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	public String getLocalidade() {
+		return localidade;
+	}
+
+	public void setLocalidade(String localidade) {
+		this.localidade = localidade;
+	}
+
+	public String getUf() {
+		return uf;
+	}
+
+	public void setUf(String uf) {
+		this.uf = uf;
+	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
 	}
 
 }

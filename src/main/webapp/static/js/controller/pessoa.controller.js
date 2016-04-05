@@ -2,7 +2,7 @@
  
 App.controller('PessoaController', ['$scope', 'PessoaService', function($scope, PessoaService) {
           var self = this;
-          self.pessoa={nome:'',dataNascimento:'',sexo:'',cpf:''};
+          self.pessoa={id:'',nome:'',dataNascimento:'',sexo:'',cpf:''};
           self.pessoas=[];
                
           self.fetchAllUsers = function(){
