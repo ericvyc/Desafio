@@ -15,16 +15,23 @@
 
 			<div class="form-group col-md-2">
 				<label for="dataNascimento">Data Nascimento</label>
-				<input type="date" class="form-control" id="dataNascimento">
+				<input type="date" class="form-control" id="dataNascimento" ng-model="ctrl.pessoa.dataNascimento">
 			</div>
 
 			<div class="form-group col-md-2">
-				<label for="sexo">Sexo</label> <br />
-				<select id="sexo" class="form-control">
+				<label for="sexo">Sexo</label>
+				<select id="sexo" class="form-control" ng-model="ctrl.pessoa.sexo">
 					<option value="F">Feminino</option>
 					<option value="M">Masculino</option>
 				</select>
 			</div>
+			
+			<div class="form-group col-md-4">
+				<label for="cpf">CPF</label> 
+				<input type="text" class="form-control" id="cpf" ng-model="ctrl.pessoa.cpf">
+			</div>
+			
+			
 		</div>
 
 
