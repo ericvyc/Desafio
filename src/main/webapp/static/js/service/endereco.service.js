@@ -4,7 +4,7 @@ App.factory('EnderecoService', ['$http', '$q', function($http, $q){
  
     return {
             getEndereco: function(cep) {
-                    return $http.get('https://viacep.com.br/ws/'+cep+'/json')
+                    return $http.get('https://viacep.com.br/ws/' + cep + '/json')
                             .then(
                                     function(response){
                                         return response.data;
