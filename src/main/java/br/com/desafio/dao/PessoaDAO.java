@@ -2,24 +2,24 @@ package br.com.desafio.dao;
 
 import java.util.List;
 
-import br.com.desafio.entity.Pessoa;
+import br.com.desafio.bo.PessoaBO;
 
 public interface PessoaDAO {
 
-	Pessoa findById(long id);
+	PessoaBO findById(long id);
 
-	Pessoa findByName(String name);
+	PessoaBO findByName(String name);
 
-	void savePessoa(Pessoa pessoa);
+	void savePessoa(PessoaBO pessoa);
 
-	void updatePessoa(Pessoa pessoa);
+	void updatePessoa(PessoaBO pessoa);
 
 	void deletePessoaById(long id);
 
-	List<Pessoa> findAll();
+	List<PessoaBO> findAll();
 
 	void deleteAll();
 
-	public boolean pessoaExiste(Pessoa pessoa);
+	public boolean pessoaExiste(PessoaBO pessoa);
 
 }

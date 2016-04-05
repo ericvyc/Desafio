@@ -3,30 +3,30 @@ package br.com.desafio.dao.impl;
 import java.io.Serializable;
 import java.util.List;
 
+import br.com.desafio.bo.EnderecoBO;
 import br.com.desafio.dao.EnderecoDAO;
-import br.com.desafio.entity.Endereco;
 
 public class EnderecoDAOImpl implements EnderecoDAO, Serializable {
 
 	private static final long serialVersionUID = -4841405610089828021L;
 
 	@Override
-	public Endereco findById(long id) {
+	public EnderecoBO findById(long id) {
 		return null;
 	}
 
 	@Override
-	public Endereco findByName(String name) {
+	public EnderecoBO findByName(String name) {
 		return null;
 	}
 
 	@Override
-	public void saveEndereco(Endereco endereco) {
+	public void saveEndereco(EnderecoBO endereco) {
 
 	}
 
 	@Override
-	public void updateEndereco(Endereco endereco) {
+	public void updateEndereco(EnderecoBO endereco) {
 
 	}
 
@@ -36,7 +36,7 @@ public class EnderecoDAOImpl implements EnderecoDAO, Serializable {
 	}
 
 	@Override
-	public List<Endereco> findAll() {
+	public List<EnderecoBO> findAll() {
 		return null;
 	}
 
@@ -46,7 +46,7 @@ public class EnderecoDAOImpl implements EnderecoDAO, Serializable {
 	}
 
 	@Override
-	public boolean enderecoExiste(Endereco endereco) {
+	public boolean enderecoExiste(EnderecoBO endereco) {
 		return false;
 	}
 

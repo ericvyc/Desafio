@@ -2,24 +2,24 @@ package br.com.desafio.dao;
 
 import java.util.List;
 
-import br.com.desafio.entity.Endereco;
+import br.com.desafio.bo.EnderecoBO;
 
 public interface EnderecoDAO {
 
-	Endereco findById(long id);
+	EnderecoBO findById(long id);
 
-	Endereco findByName(String name);
+	EnderecoBO findByName(String name);
 
-	void saveEndereco(Endereco endereco);
+	void saveEndereco(EnderecoBO endereco);
 
-	void updateEndereco(Endereco endereco);
+	void updateEndereco(EnderecoBO endereco);
 
 	void deleteEnderecoById(long id);
 
-	List<Endereco> findAll();
+	List<EnderecoBO> findAll();
 
 	void deleteAll();
 
-	public boolean enderecoExiste(Endereco endereco);
+	public boolean enderecoExiste(EnderecoBO endereco);
 
 }

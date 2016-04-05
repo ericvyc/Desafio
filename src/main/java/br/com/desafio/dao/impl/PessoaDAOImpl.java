@@ -3,30 +3,30 @@ package br.com.desafio.dao.impl;
 import java.io.Serializable;
 import java.util.List;
 
+import br.com.desafio.bo.PessoaBO;
 import br.com.desafio.dao.PessoaDAO;
-import br.com.desafio.entity.Pessoa;
 
 public class PessoaDAOImpl implements PessoaDAO, Serializable {
 
 	private static final long serialVersionUID = -6368358918731707106L;
 
 	@Override
-	public Pessoa findById(long id) {
+	public PessoaBO findById(long id) {
 		return null;
 	}
 
 	@Override
-	public Pessoa findByName(String name) {
+	public PessoaBO findByName(String name) {
 		return null;
 	}
 
 	@Override
-	public void savePessoa(Pessoa pessoa) {
+	public void savePessoa(PessoaBO pessoa) {
 
 	}
 
 	@Override
-	public void updatePessoa(Pessoa pessoa) {
+	public void updatePessoa(PessoaBO pessoa) {
 
 	}
 
@@ -36,7 +36,7 @@ public class PessoaDAOImpl implements PessoaDAO, Serializable {
 	}
 
 	@Override
-	public List<Pessoa> findAll() {
+	public List<PessoaBO> findAll() {
 		return null;
 	}
 
@@ -46,7 +46,7 @@ public class PessoaDAOImpl implements PessoaDAO, Serializable {
 	}
 
 	@Override
-	public boolean pessoaExiste(Pessoa pessoa) {
+	public boolean pessoaExiste(PessoaBO pessoa) {
 		return false;
 	}
 
