@@ -33,6 +33,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 	<script src="<c:url value='/static/js/app.js' />"></script>
+	<script src="<c:url value='/static/js/ng-mask-1.0.1.js' />"></script>
 	<script src="<c:url value='/static/js/service/pessoa.service.js' />"></script>
 	<script src="<c:url value='/static/js/controller/pessoa.controller.js' />"></script>
 	<script src="<c:url value='/static/js/service/endereco.service.js' />"></script>

@@ -2,22 +2,35 @@ package br.com.desafio.bo;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="TB_ENDERECO")
 public class EnderecoBO implements Serializable {
 
 	private static final long serialVersionUID = 7341480610948280153L;
 
+	@Column(name="LOGRADOURO")
 	private String logradouro;
 
+	@Column(name="NUMERO")
 	private Integer numero;
 
+	@Column(name="COMPLEMENTO")
 	private String complemento;
 
+	@Column(name="BAIRRO")
 	private String bairro;
 
+	@Column(name="CIDADE")
 	private String localidade;
 
+	@Column(name="ESTADO")
 	private String uf;
 
+	@Column(name="CEP")
 	private String cep;
 
 	@Override

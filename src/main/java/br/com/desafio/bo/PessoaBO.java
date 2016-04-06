@@ -2,18 +2,31 @@ package br.com.desafio.bo;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "TB_PESSOA")
 public class PessoaBO implements Serializable {
 
 	private static final long serialVersionUID = 3405671676514603949L;
 
+	@Id
+	@Column(name = "ID")
 	private long id;
 
+	@Column(name = "NOME")
 	private String nome;
 
+	@Column(name = "DATA-NASCIMENTO")
 	private String dataNascimento;
 
+	@Column(name = "SEXO")
 	private char sexo;
 
+	@Column(name = "CPF")
 	private String cpf;
 
 	public PessoaBO() {
@@ -135,6 +148,5 @@ public class PessoaBO implements Serializable {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-
 
 }

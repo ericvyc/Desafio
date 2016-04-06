@@ -30,7 +30,7 @@
 			
 			<div class="form-group col-md-4">
 				<label for="cpf">CPF</label> 
-				<input type="text" class="form-control" id="cpf" ng-model="ctrl.pessoa.cpf" ng-required="required" ui-mask="999.999.999-99">
+				<input type="text" class="form-control" id="cpf" ng-model="ctrl.pessoa.cpf" ng-required="required" data-ng-mask="###.###.###-##" data-on="keyup">
 			</div>
 			
 			
