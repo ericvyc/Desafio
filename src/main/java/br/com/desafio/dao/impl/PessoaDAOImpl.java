@@ -2,6 +2,7 @@ package br.com.desafio.dao.impl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -27,11 +28,21 @@ public class PessoaDAOImpl implements PessoaDAO, Serializable {
 
 	@Override
 	public PessoaBO findById(long id) {
+		for(PessoaBO pessoa : pessoas){
+			if(pessoa.getId() == id){
+				return pessoa;
+			}
+		}
 		return null;
 	}
 
 	@Override
 	public PessoaBO findByName(String name) {
+		for(PessoaBO pessoa : pessoas){
+			if(pessoa.getNome() == name){
+				return pessoa;
+			}
+		}
 		return null;
 	}
 
@@ -43,12 +54,18 @@ public class PessoaDAOImpl implements PessoaDAO, Serializable {
 
 	@Override
 	public void updatePessoa(PessoaBO pessoa) {
-
+		int index = pessoas.indexOf(pessoa);
+		pessoas.set(index, pessoa);
 	}
 
 	@Override
 	public void deletePessoaById(long id) {
-
+		for (Iterator<PessoaBO> iterator = pessoas.iterator(); iterator.hasNext(); ) {
+			PessoaBO pessoa = iterator.next();
+			if (pessoa.getId() == id) {
+				iterator.remove();
+			}
+		}
 	}
 
 	@Override
@@ -58,12 +75,12 @@ public class PessoaDAOImpl implements PessoaDAO, Serializable {
 
 	@Override
 	public void deleteAll() {
-
+		pessoas.clear();
 	}
 
 	@Override
 	public boolean pessoaExiste(PessoaBO pessoa) {
-		return false;
+		return findByName(pessoa.getNome())!=null;
 	}
 
 	private static List<PessoaBO> popular() {

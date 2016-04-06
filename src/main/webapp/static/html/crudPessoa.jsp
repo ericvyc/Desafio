@@ -4,9 +4,11 @@
 	
 	<div ng-controller="PessoaController as ctrl">
 
-	<form method="post" ng-submit="ctrl.submit()">
+	<form method="post" ng-submit="ctrl.submit()" name="meuForm" class="form-horizontal">
 		<!-- area de campos do form -->
-
+	
+		<input type="hidden" ng-model="ctrl.pessoa.id" />
+	
 		<div class="row">
 			<div class="form-group col-md-4">
 				<label for="nomePessoa">Nome</label> 
@@ -38,8 +40,9 @@
 		<hr />
 		<div id="actions" class="row">
 			<div class="col-md-12">
-				<button type="submit" class="btn btn-primary">Salvar</button>
-				<button type="reset" class="btn btn-default">Cancelar</button>
+				<input type="submit"  value="{{!ctrl.pessoa.id ? 'Adicionar' : 'Atualizar'}}" class="btn btn-primary btn-sm" ng-disabled="meuForm.$invalid">
+                <button type="button" ng-click="ctrl.reset()" class="btn btn-warning btn-sm" ng-disabled="myForm.$pristine">Limpar Formulário</button>
+                <button type="button" ng-click="ctrl.deletarTodos()" class="btn btn-danger btn-sm">Deletar todas as Pessoas</button>
 			</div>
 		</div>
 	</form>
@@ -53,6 +56,7 @@
 					<th>Data de Nascimento</th>
 					<th>Sexo</th>
 					<th>CPF</th>
+					<th width="20%"></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -62,6 +66,10 @@
                     <td><span ng-bind="p.dataNascimento"></span></td>
                     <td><span ng-bind="p.sexo"></span></td>
                     <td><span ng-bind="p.cpf"></span></td>
+                    <td>
+                      <button type="button" ng-click="ctrl.edit(p.id)" class="btn btn-success custom-width">Editar</button>  
+                      <button type="button" ng-click="ctrl.remove(p.id)" class="btn btn-danger custom-width">Remover</button>
+                    </td>
 				</tr>
 			</tbody>
 		</table>
