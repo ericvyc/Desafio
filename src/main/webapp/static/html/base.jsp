@@ -29,9 +29,10 @@
 	background-color: yellow;
 }
 </style>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+<link rel="stylesheet" href="<c:url value='/static/css/bootstrap.css' />">
+	<script src="<c:url value='/static/js/angular.js' />"></script>
+	<script src="<c:url value='/static/js/angular.ui.router.js' />"></script>
+	<!-- <script src="<c:url value='/static/js/jquery.js' />"></script>  -->
 	<script src="<c:url value='/static/js/app.js' />"></script>
 	<script src="<c:url value='/static/js/ng-mask-1.0.1.js' />"></script>
 	<script src="<c:url value='/static/js/service/pessoa.service.js' />"></script>
