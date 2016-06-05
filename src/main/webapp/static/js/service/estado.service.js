@@ -1,6 +1,6 @@
 'use strict';
  
-App.factory('PessoaService', ['$http', '$q', function($http, $q){
+App.factory('EstadoService', ['$http', '$q', function($http, $q){
  
     return {
             fetchAllUsers: function() {

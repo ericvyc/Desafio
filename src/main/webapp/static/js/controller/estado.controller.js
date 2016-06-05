@@ -1,9 +1,9 @@
 'use strict';
  
-App.controller('PessoaController', ['$scope', 'PessoaService', function($scope, PessoaService) {
+App.controller('EstadoController', ['$scope', 'EstadoService', function($scope, PessoaService) {
           var self = this;
-          self.pessoa={id:'',nome:'',dataNascimento:'',sexo:'',cpf:''};
-          self.pessoas=[];
+          self.estado={id:'',nome:'',dataNascimento:'',sexo:'',cpf:''};
+          self.estados=[];
                
           self.fetchAllUsers = function(){
         	  PessoaService.fetchAllUsers()

@@ -8,9 +8,9 @@ App.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $url
     
     $stateProvider
         
-        .state('pessoa', {
-            url: '/pessoa',
-            templateUrl: 'static/html/crudPessoa.jsp'
+        .state('estado', {
+            url: '/estado',
+            templateUrl: 'static/html/crudEstado.jsp'
         })
         
         .state('endereco', {

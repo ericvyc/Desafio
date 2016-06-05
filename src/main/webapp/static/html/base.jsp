@@ -32,13 +32,12 @@
 <link rel="stylesheet" href="<c:url value='/static/css/bootstrap.css' />">
 	<script src="<c:url value='/static/js/angular.js' />"></script>
 	<script src="<c:url value='/static/js/angular.ui.router.js' />"></script>
-	<!-- <script src="<c:url value='/static/js/jquery.js' />"></script>  -->
 	<script src="<c:url value='/static/js/app.js' />"></script>
 	<script src="<c:url value='/static/js/ng-mask-1.0.1.js' />"></script>
-	<script src="<c:url value='/static/js/service/pessoa.service.js' />"></script>
-	<script src="<c:url value='/static/js/controller/pessoa.controller.js' />"></script>
 	<script src="<c:url value='/static/js/service/endereco.service.js' />"></script>
 	<script src="<c:url value='/static/js/controller/endereco.controller.js' />"></script>
+		<script src="<c:url value='/static/js/service/estado.service.js' />"></script>
+	<script src="<c:url value='/static/js/controller/estado.controller.js' />"></script>
 </head>
 <body ng-app="meuApp" class="ng-cloak">
 
@@ -46,7 +45,7 @@
 
 <h1>Crud's</h1>
 
-<a ui-sref="pessoa" class="btn btn-primary">Crud de Pessoa</a>
+<a ui-sref="estado" class="btn btn-primary">Crud de Estado</a>
 <a ui-sref="endereco" class="btn btn-primary">Crud de Endereço</a>
 
 <div ui-view></div>
