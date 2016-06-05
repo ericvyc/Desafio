@@ -9,46 +9,17 @@
 		<div class="row">
 
 			<div class="form-group col-md-2">
-				<label for="cep">CEP</label> 
-				<input type="text"	class="form-control" id="cep" ng-model="ctrl.endereco.cep" ng-blur="ctrl.getEndereco(ctrl.endereco.cep)">
+				<label for="cep">Nome</label> 
+				<input type="text"	class="form-control" id="nome" ng-model="ctrl.estado.nome">
 			</div>
-			
+
 			<div class="form-group col-md-2">
-				<label for="numero">Número</label> 
-				<input type="text" class="form-control" id="numero" ng-model="ctrl.endereco.numero">
-			</div>
-			
-			<div class="form-group col-md-4">
-				<label for="logradouro">Endereço</label> 
-				<input type="text"	class="form-control" id="logradouro" ng-model="ctrl.endereco.logradouro">
-			</div>
-			
-			<div class="form-group col-md-4">
-				<label for="complemento">Complemento</label> 
-				<input type="text"	class="form-control" id="complemento" ng-model="ctrl.endereco.complemento">
+				<label for="cep">Sigla</label> 
+				<input type="text" class="form-control" id="sigla" ng-model="ctrl.estado.sigla">
 			</div>
 
 		</div>
 		
-		<div class="row">
-		
-			<div class="form-group col-md-4">
-				<label for="bairro">Bairro</label> 
-				<input type="text" class="form-control" id="bairro" ng-model="ctrl.endereco.bairro">
-			</div>
-			
-			<div class="form-group col-md-4">
-				<label for="localidade">Cidade</label> 
-				<input type="text" class="form-control" id="localidade" ng-model="ctrl.endereco.localidade">
-			</div>
-			
-			<div class="form-group col-md-2">
-				<label for="uf">Estado</label> 
-				<input type="text" class="form-control" id="uf" ng-model="ctrl.endereco.uf">
-			</div>
-		
-		</div>
-
 		<hr />
 		<div id="actions" class="row">
 			<div class="col-md-12">
@@ -56,6 +27,34 @@
 				<button type="reset" class="btn btn-default">Cancelar</button>
 			</div>
 		</div>
+
+		<div class="tablecontainer">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Nome</th>
+						<th>Sigla</th>
+						<th width="20%"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="p in ctrl.estados">
+						<td><span ng-bind="p.id"></span></td>
+						<td><span ng-bind="p.nome"></span></td>
+						<td><span ng-bind="p.sigla"></span></td>
+						<td>
+							<button type="button" ng-click="ctrl.edit(p.id)"
+								class="btn btn-success custom-width">Editar</button>
+							<button type="button" ng-click="ctrl.remove(p.id)"
+								class="btn btn-danger custom-width">Remover</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+
 	</form>
 	
 </div>	

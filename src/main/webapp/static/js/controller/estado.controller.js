@@ -1,12 +1,12 @@
 'use strict';
  
-App.controller('EstadoController', ['$scope', 'EstadoService', function($scope, PessoaService) {
+App.controller('EstadoController', ['$scope', 'EstadoService', function($scope, EstadoService) {
           var self = this;
           self.estado={id:'',nome:'',dataNascimento:'',sexo:'',cpf:''};
           self.estados=[];
                
           self.fetchAllUsers = function(){
-        	  PessoaService.fetchAllUsers()
+        	  EstadoService.fetchAllUsers()
                   .then(
                                function(d) {
                                     self.pessoas = d;
@@ -18,7 +18,7 @@ App.controller('EstadoController', ['$scope', 'EstadoService', function($scope, 
           };
           
           self.criarPessoa = function(pessoa){
-              PessoaService.criarPessoa(pessoa)
+              EstadoService.criarPessoa(pessoa)
                       .then(
                       self.fetchAllUsers, 
                               function(errResponse){
@@ -28,7 +28,7 @@ App.controller('EstadoController', ['$scope', 'EstadoService', function($scope, 
           };
           
           self.updatePessoa = function(pessoa, id){
-              PessoaService.updatePessoa(pessoa, id)
+              EstadoService.updatePessoa(pessoa, id)
                       .then(
                               self.fetchAllUsers, 
                               function(errResponse){
@@ -38,7 +38,7 @@ App.controller('EstadoController', ['$scope', 'EstadoService', function($scope, 
           };
           
           self.deletePessoa = function(id){
-              PessoaService.deletePessoa(id)
+              EstadoService.deletePessoa(id)
                       .then(
                               self.fetchAllUsers, 
                               function(errResponse){
@@ -49,7 +49,7 @@ App.controller('EstadoController', ['$scope', 'EstadoService', function($scope, 
           
 
 		 self.deletarTodos = function() {
-				PessoaService.deletarTodos().then(self.fetchAllUsers,
+				EstadoService.deletarTodos().then(self.fetchAllUsers,
 						function(errResponse) {
 							console.error('Erro ao deletar todas as pessoas.');
 						});

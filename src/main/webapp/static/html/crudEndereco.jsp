@@ -4,7 +4,7 @@
 
 <div ng-controller="EnderecoController as ctrl">
 
-	<form action="#" method="post">
+	<form action="#">
 
 		<div class="row">
 
@@ -52,7 +52,7 @@
 		<hr />
 		<div id="actions" class="row">
 			<div class="col-md-12">
-				<button type="submit" class="btn btn-primary">Salvar</button>
+				<button class="btn btn-primary" ng-click="ctrl.salvar()">Salvar</button>
 				<button type="reset" class="btn btn-default">Cancelar</button>
 			</div>
 		</div>
